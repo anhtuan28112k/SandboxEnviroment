@@ -1,0 +1,109 @@
+<apex:page id="MySecondPDF" standardController="Opportunity" renderAs="pdf">
+    <body>    
+         <div class="" style="min-height: 2in;">
+            <!-- SECTION: header w/ company address and logo -->
+            <table class="header-table">
+                <tr>
+                    <td style="width: 75%">
+                        <apex:image width="2.75in" url="{!$Resource.companyLogo}"/>
+                    </td>
+                    <td style="">
+                        <table style="width: 2.8in;border: solid 1px black; border-collapse: separate; ">
+                            <tr>
+                                <td style="text-align: center; font-size: 16pt; font-weight: bold; border-bottom: solid 1px black"
+                                    colspan="2">Draft Contract
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;&nbsp;Date:</td>
+                                <td style="text-align:right;"> 
+                                    {!DAY(TODAY())}-{!MONTH(TODAY())}-{!YEAR(TODAY())}&nbsp;&nbsp;
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;&nbsp;Seller:</td>
+                                <td style="text-align:right;">Cao Viet Hoang&nbsp;&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;&nbsp;Sales:</td>
+                                <td style="text-align:right;">Nguyen Van A&nbsp;&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;&nbsp;Buyer:</td>
+                                <td style="text-align:right;">Le Thi B&nbsp;&nbsp;</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <hr/>
+        <table >
+            <tr>
+                <td >Address:</td>
+                <table Style="padding-left: 90px;">
+                    <tr>
+                        <td>
+                            {!Opportunity.Name}
+                        </td>
+                    </tr>                       
+                    <tr>
+                        <td>
+                            {!Opportunity.Description}
+                        </td>
+                    </tr>
+                    <tr> 
+                        <td>
+                           {!Opportunity.Type}
+                        </td>
+                    </tr>                     
+                </table>
+            </tr>
+        </table>
+        <br/>
+        <hr/>
+        
+        <div style="min-height: 5.7in;">
+            <table style="width: 100%;">
+                 <tr>
+                    <th>Name</th>
+                    <th>Industry</th> 
+                    <th>Phone</th> 
+                    <th>Fax</th>
+                    <th>Website</th>
+                  </tr>
+                  <tr>
+                    <td>Name</td>
+                    <td>Industry</td> 
+                    <td>Phone</td>
+                    <td>Fax</td>  
+                    <td>Website</td>  
+					<!--                      
+                    <td>{!Opportunity.Account.Name}</td>
+                    <td>{!Opportunity.Account.Industry}</td> 
+                    <td>{!Opportunity.Account.Phone}</td>
+                    <td>{!Opportunity.Account.Fax}</td>  
+                    <td>{!Opportunity.Account.Website}</td>  
+                    -->  
+                   </tr>
+             </table>
+         <hr/>
+         </div>   
+        <!--Footer-->
+         <div class="footer" style="">
+         <hr/>
+            <table align="center" style="width: 100%;">   
+                <tr>
+                    <td colspan="2" style="font-size: 10pt; color: green;">
+                        <table style="width: 100%; border-collapse: collapse; border: 1px solid black; ">
+                            <tr>
+                                <td style="text-align: left;">VTI</td>                         
+                                <td style="text-align: right;">www.vti.com.vn</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>      
+       </div>
+    </body>
+</apex:page>

@@ -1,0 +1,45 @@
+<apex:page >
+    <!-- stylesheets -->
+        <apex:stylesheet value="https://cdnjs.cloudflare.com/ajax/libs/select2/3.5.1/select2.css"/>
+        <apex:stylesheet value="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+        
+        <!-- scripts -->
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/3.5.1/select2.js" />
+
+        <style type="text/css">
+            body{
+                color: #0070d2;
+            }
+            .mainTitle{
+                font-size: 20px !important;
+                margin-bottom: 10px 0 !important;
+            }
+
+            .messageText{
+                display: flex !important;
+                align-items: center !important;
+                font-size: 15px !important;
+            }
+
+            .messageText span{
+                margin-right: 10px !important;
+            }
+
+            .message.confirmM3, .message.warningM3{
+                display: flex !important;
+            }
+
+            .select2-search .select2-input{
+                height: 30px !important;
+            }
+
+            .btn{
+                color: #0070d2 !important;
+                width: 100px !important;
+                height: 30px !important;
+                font-size: 15px !important;
+            }
+        </style>
+    <h1>Hello World</h1>
+</apex:page>
